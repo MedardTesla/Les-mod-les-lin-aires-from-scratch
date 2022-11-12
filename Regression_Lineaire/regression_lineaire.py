@@ -18,7 +18,7 @@ class RegressionLineaire():
         
        
         
-        for i in range(0, self.n_iters):
+        for _ in range(0, self.n_iters):
             model = X.dot(self.theta)                      #         aX + b        (n_samples*n_feature+1)*(2, 1)
             gradient = 1/n_samples * X.T.dot(model - y)     # dimention  2*1
             self.theta = self.theta - self.lr * gradient
