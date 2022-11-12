@@ -14,12 +14,12 @@ class RegressionLineaire():
         n_samples, n_feature = x.shape
         y = y.reshape(y.shape[0], 1)
         X = np.hstack((x, np.ones((n_samples, n_feature))))
-        self.theta = np.random.randn(2, 1)              # initialisation du theta avec des valeur aleatoire
+        self.theta = np.random.randn(2, 1)              # initialisation du theta avec des valeurs aleatoires
         
        
         
         for i in range(0, self.n_iters):
-            model = X.dot(self.theta)                      # (n_samples*n_feature+1)*(2, 1)
+            model = X.dot(self.theta)                      #         aX + b        (n_samples*n_feature+1)*(2, 1)
             gradient = 1/n_samples * X.T.dot(model - y)     # dimention  2*1
             self.theta = self.theta - self.lr * gradient
             

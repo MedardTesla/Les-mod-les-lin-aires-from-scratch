@@ -28,9 +28,5 @@ def coef_determination(y, prediction):
   
   return 1 - u/v
 
-print("Valeur initial : ", y[0:5], "Valeur predit : ",model.predict(X)[0:5])
-print("X", X[0:5])
-print("Le theta : ", model.theta)
 
-
-print("Le coefficient de determination est : ", coef_determination(y, model.predict(X)))
+print("Le coefficient de determination est : ", coef_determination(y_train, model.predict(X_train)))
